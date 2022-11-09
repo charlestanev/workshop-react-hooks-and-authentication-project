@@ -1,0 +1,126 @@
+div.sidebar {
+	padding-left: 0em;
+	padding-bottom: 1em;
+}
+
+div.sidebar > a,
+div.sidebar > div > a {
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	padding-left: 0.3em;
+	font-size: 17px;
+}
+div.sidebar > a:not(.activenav):hover,
+div.sidebar > div > a:not(.activenav):hover {
+	background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #20478073);
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+.secondtier {
+	padding-left: 1em;
+	border-left: 1px solid !important;
+	margin-left: 0.5em;
+}
+.client_nav_trigger.activenav {
+	background-color: #204780 !important;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	border-left: 1px solid #204780 !important;
+	font-weight: 600;
+	color: white;
+}
+.client_nav_trigger.activenav a {
+	color: white;
+}
+.clientnav_tooltip {
+	position: relative;
+}
+
+.clientnav_tooltip .clientnav_tooltiptext {
+	visibility: hidden;
+	width: 90%;
+	background-color: #204780;
+	color: white;
+	text-align: left;
+	border-radius: 6px;
+	padding: 8px 8px;
+	position: absolute;
+	z-index: 1;
+	left: 35%;
+	top: 95%;
+	max-height: 75em;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.clientnav_tooltiptext::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.clientnav_tooltiptext {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.clientnav_tooltip .clientnav_tooltiptext::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%; /* At the top of the tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent #204780 transparent;
+}
+
+.clientnav_tooltip:hover .clientnav_tooltiptext {
+	visibility: visible;
+	transition-delay: 1s;
+}
+.clientnav_tooltiptext > ul > li > a {
+	color: white;
+}
+.clientnav_tooltiptext > ul {
+	padding: 0px;
+}
+.clientnav_tooltiptext > ul > li {
+	padding-bottom: 0.5em;
+}
+.client_nav_trigger .title_holder {
+	display: inline-block;
+	margin-left: 3%;
+	width: 87%;
+	vertical-align: top;
+}
+.client_nav_trigger .icon_holder {
+	display: inline-block;
+	width: 10%;
+	vertical-align: top;
+}
+@media screen and (max-width: 800px) {
+	.client_nav_trigger {
+		font-size: 15px !important;
+	}
+	.client_nav_trigger .title_holder {
+		width: 82%;
+	}
+	.client_nav_trigger .icon_holder {
+		width: 15%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.sidebar {
+		width: 100%;
+		height: auto;
+	}
+}
+@media screen and (max-width: 400px) {
+	.sidebar a {
+		text-align: center;
+		float: none;
+	}
+}
